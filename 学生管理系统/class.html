@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<script src="js/jquery-3.5.1.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/index.js"></script>
+		<link rel="stylesheet" href="css/index.css"/>
+		
+	</head>
+	<body>
+		<!-- 导航 -->
+		<!-- ========================= -->
+		<nav class="navbar navbar-default navbar-static-top  navbar-inverse">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#slide-left">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">人员信息管理</a>
+		
+			</div>
+			<ul class="nav navbar-nav nav-menu" style="margin-right: 25px;">
+				<li><a href="main.html">首页</a></li>
+				<li><a href="">使用指南</a></li>
+				<li><a href="">关于</a></li>
+			</ul>
+			<form class="navbar-form navbar-left">
+				<div class=" input-group">
+					<input type="" class="form-control" />
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+					</span>
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right pull-right" style="margin-right: 40px;">
+				<li><a href="">欢迎&nbsp;YHT&nbsp;登录</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的
+						<span class="caret"></span></a>
+					<ul class="dropdown-menu text-center">
+						<li class="text-center"  data-toggle="modal" data-target="#personMessage"><a href="#">个人资料</a></li>
+						
+						<li role="separator" class="divider"></li>
+						<li class="text-center" data-toggle="modal" data-target="#modifyPassword"><a href="#">修改密码</a></li>
+						<li role="separator" class="divider"></li>
+						<li class="text-center"><a href="index.html">退出</a></li>
+					</ul>
+					
+				</li>
+				
+			</ul>
+			
+		</nav>
+		<!-- personMessage Modal -->
+		<div class="modal fade" id="personMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">个人资料</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form-horizontal">
+							<div class="form-group">
+								<label class="col-sm-3 control-label">姓名</label>
+								<div class="col-sm-7" >
+									<input type="text"  class="form-control">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-3 control-label">性别</label>
+								<div class="col-sm-3">
+								  <div class="radio">
+								    <label>
+								      <input type="radio" name="sex" checked> 男
+								    </label>
+								  </div>
+								</div>
+								<div class="col-sm-3">
+								  <div class="radio">
+								    <label>
+								      <input type="radio"  name="sex"> 女
+								    </label>
+								  </div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">年龄</label>
+								<div class="col-sm-7">
+									<input type="text"   class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">手机号</label>
+								<div class="col-sm-7">
+									<input type="text"   class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">邮箱</label>
+								<div class="col-sm-7">
+									<input type="text"  class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">家庭住址</label>
+								<div class="col-sm-7">
+									<input type="text"  class="form-control">
+								</div>
+							</div>
+						</form>
+											  
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">确认</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="modifyPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">修改密码</h4>
+					</div>
+					<div class="modal-body">
+						<form action="" class="form-horizontal">
+							<div class="form-group">
+								<label class="col-sm-3 control-label">原密码</label>
+								<div class="col-sm-7" >
+									<input type="password"  class="form-control"  placeholder="请输入原密码">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-3 control-label">新密码</label>
+								<div class="col-sm-7">
+									<input type="password"   class="form-control"  placeholder="请输入新密码">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">新密码</label>
+								<div class="col-sm-7">
+									<input type="password"  class="form-control" placeholder="请再次输入新密码">
+								</div>
+							</div>
+							
+						</form>
+											  
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">确认</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ========================= -->
+		<div class="container-fluid">
+			<div class="row">
+				<!-- 侧边栏 -->
+				<div class="navbar-default navbar-collapse col-sm-2" id="slide-left">
+					<ul class="nav col-sm-12 slide-group">
+						<li>
+							<a href="#sub1" class="collapse" data-toggle="collapse">学生管理<span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+							<ul id="sub1" class="nav collapse">
+								<li class="text-center"><a href="student.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;学生信息</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#sub2" class="collapse" data-toggle="collapse">教师管理<span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+							<ul id="sub2" class="nav collapse">
+								<li class="text-center"><a href="teacher.html"><span class="glyphicon glyphicon-book"></span>&nbsp;教师信息</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#sub3" class="collapse" data-toggle="collapse">班级管理<span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+							<ul id="sub3" class="nav collapse">
+								<li class="text-center"><a href="class.html"><span class="glyphicon glyphicon-calendar"></span>&nbsp;班级列表</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#sub4" class="collapse" data-toggle="collapse">课程管理<span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+							<ul id="sub4" class="nav collapse">
+								<li class="text-center"><a href="lesson.html"><span class="glyphicon glyphicon-edit"></span>&nbsp;课程列表</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#sub5" class="collapse" data-toggle="collapse">管理员管理<span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+							<ul id="sub5" class="nav collapse">
+								<li class="text-center"><a href="admin.html"><span class="glyphicon glyphicon-user"></span>&nbsp;管理员信息</a></li>
+								<li class="text-center"><a href="visitor.html"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;访客列表</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--  -->
+				<div class="col-sm-10 page-main">
+					<ol class="breadcrumb">
+						<li>班级管理</li>
+						<li>班级列表</li>
+					</ol>
+					<form class="form-inline">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="请输入班级名">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="请输入班级号">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="请输入班主任姓名">
+						</div>
+						<button class="btn btn-info"><span class="glyphicon glyphicon-search"></span></button>
+					</form>
+					<hr>
+					<div class="text-center" style="display:block">
+						<button class="btn btn-primary col-sm-1" style="margin-right:10px" data-toggle="modal" data-target="#classAddModal"><span
+							 class="glyphicon glyphicon-plus" style="margin-right: 10px;"></span>添加</button>
+						<button class="btn btn-warning col-sm-1"><span class="glyphicon glyphicon-upload" style="margin-right: 10px;"></span>导出</button>
+						<label class="pull-right" style="margin-right:20px">共有数据3条</label>
+						<div class="modal fade" id="classAddModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<h4 class="modal-title" id="myModalLabel">添加班级</h4>
+									</div>
+									<div class="modal-body">
+										<form action="" class="form-horizontal">
+											<div class="form-group">
+												<label class="col-sm-3 control-label">班级号</label>
+												<div class="col-sm-7">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label">班级名</label>
+												<div class="col-sm-7">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label">班主任</label>
+												<div class="col-sm-7">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+										</form>
+
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+										<button type="button" class="btn btn-primary">确定</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<table class="table table-striped table-bordered text-center" style="margin-top:80px">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>班级编号</th>
+								<th>班级名</th>
+								<th>班主任</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>C212733</td>
+								<td>物理</td>
+								<td>杨旭</td>
+								<td>
+									<a href="" data-toggle="modal" data-target="#classModifyModal"><span class="glyphicon glyphicon-pencil" style="margin-right:10px"></span></a>
+									<!-- Modal -->
+									<div class="modal fade" id="classModifyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													<h4 class="modal-title" id="myModalLabel">班级信息修改</h4>
+												</div>
+												<div class="modal-body">
+													<form action="" class="form-horizontal">
+														<div class="form-group">
+															<label class="col-sm-3 control-label">班级号</label>
+															<div class="col-sm-7">
+																<input type="text" class="form-control" value="S235243" disabled>
+															</div>
+														</div>
+														<div class="form-group">
+															<label class="col-sm-3 control-label">班级名</label>
+															<div class="col-sm-7">
+																<input type="text" class="form-control" value="物理">
+															</div>
+														</div>
+
+														<div class="form-group">
+															<label class="col-sm-3 control-label">班主任</label>
+															<div class="col-sm-7">
+																<input type="text" class="form-control" value="杨旭">
+															</div>
+														</div>
+
+													</form>
+
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+													<button type="button" class="btn btn-primary">确认</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a href=""><span class="glyphicon glyphicon-trash"></span></a>
+								</td>
+
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>C212733</td>
+								<td>物理</td>
+								<td>杨旭</td>
+								<td>
+									<a href="" data-toggle="modal" data-target="#classModifyModal"><span class="glyphicon glyphicon-pencil" style="margin-right:10px"></span></a>
+
+									<a href=""><span class="glyphicon glyphicon-trash"></span></a>
+								</td>
+
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>C212733</td>
+								<td>物理</td>
+								<td>杨旭</td>
+								<td>
+									<a href="" data-toggle="modal" data-target="#classModifyModal"><span class="glyphicon glyphicon-pencil" style="margin-right:10px"></span></a>
+
+									<a href=""><span class="glyphicon glyphicon-trash"></span></a>
+								</td>
+
+							</tr>
+						</tbody>
+					</table>
+					<div class="row text-center">
+						<div class="col-sm-6 col-sm-offset-2">
+							<ul class="pagination">
+								<li><a href="#" aria-label="Previous"><span aria-hidden="true">上一页</span></a></li>
+								<li><a href="">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+								<li><a href="">4</a></li>
+								<li><a href="#" aria-label="Next"><span aria-hidden="true">下一页</span></a></li>
+							</ul>
+						</div>
+						<form class="form-inline" style="padding:20px">
+							跳转至
+							<div class="form-group">
+								<input type="text" class="form-control" style="width:40px">
+							</div>
+							页
+							<button class="btn btn-primary">GO<span class="glyphicon glyphicon-arrow-right" style="marin-left:20px"></span></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer" style="background-color:#1C1C1C;color:white;height:80px;line-height:30px">
+			<div class="container text-center">
+				<p>版权所有：YHT China &nbsp;&nbsp;&nbsp;电话：029-12345678<br />地址：陕西省西安市 &nbsp;&nbsp;&nbsp; 邮编：123456</p>
+			</div>
+		</footer>
+	</body>
+</html>

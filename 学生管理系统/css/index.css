@@ -1,0 +1,61 @@
+header {
+	height: 15%;
+	font-size: 36px;
+	line-height: 80px;
+}
+
+header img {
+	width: 100%;
+}
+
+.login {
+	display: block;
+	background-image: url(../img/logo.png);
+	height: 600px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.login .form-user {
+	border-radius: 15px;
+	background-color: burlywood;
+	margin-top: 200px;
+}
+
+.login .form-user form {
+	margin-top: 60px;
+}
+
+
+#slide-left {
+	height: 600px;
+}
+
+.carousel-inner>.item>img {
+	display: block;
+	width: 100%;
+	height: 360px;
+}
+
+th {
+	text-align: center;
+}
+
+#username-tag>span,
+#password-tag>span,
+#register-username-tag>span,
+#register-password-tag>span,
+#register-repeatPassword-tag>span,
+#register-photo-tag>span,
+#register-email-tag>span {
+	color: #A52A2A;
+}
+
+.nav-menu>li {
+	width: 120px;
+	text-align: center;
+}
+
+.breadcrumb {
+	color: #045FB4;
+}

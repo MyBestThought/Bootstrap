@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 引入bootstrap -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+		<style>
+			body{
+				background: -webkit-linear-gradient(right, yellow, green); /* Safari 5.1 - 6.0 */
+				            background: -o-linear-gradient(right, yellow, green); /* Opera 11.1 - 12.0 */
+				            background: -moz-linear-gradient(right, yellow, green); /* Firefox 3.6 - 15 */
+				            background: linear-gradient(right, yellow, green); /* 标准的语法（必须放在最后） */
+			}
+			.border-div{
+				border: 1px solid lightgrey;
+				border-radius: 3%;
+				margin-top: 30%;
+				background-color: white;
+			}
+			.form-border{
+				margin: 50px 0;
+			}
+		</style>
+	</head>
+	<body class="text-center">
+		<div class="row col-sm-6 col-sm-offset-3 text-center">
+			<div class="col-sm-6 col-sm-offset-3 border-div">
+				<form class="form-horizontal form-border">
+					<div class="form-group">
+						<label class="col-sm-1 control-label col-sm-offset-1"><span class="glyphicon glyphicon-user"></span></label>
+						<div class="col-sm-9 username-area">
+							<input type="text" class="form-control" id="inputUsername" placeholder="Username">
+						</div>
+						<label class="control-label hidden" id="username-tag"><span class="glyphicon glyphicon-remove"></span></label>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-1 control-label col-sm-offset-1"><span class="glyphicon glyphicon-lock"></span></label>
+						<div class="col-sm-9 password-area">
+							<input type="password" class="form-control" id="inputPassword" placeholder="Password" />
+						</div>
+						<label class="control-label hidden" id="password-tag"><span class="glyphicon glyphicon-remove"></span></label>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-1">
+							<input type="checkbox"/>&nbsp;&nbsp;记住我
+							<a type="checkbox" class="col-sm-offset-3" style="text-decoration: underline;cursor: pointer;">忘记密码?</a>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-1">
+							<a href="main.html" class="btn btn-info col-sm-4 col-sm-offset-1">登录</a>
+							<a class="btn btn-info col-sm-4 col-sm-offset-1">注册</a>
+						</div>
+					</div>
+				
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

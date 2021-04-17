@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录页</title>
+		<!-- 引入bootstrap -->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<!-- 引入自定义css -->
+		<link rel="stylesheet" href="css/index.css"/>
+		<!-- 引入jquery -->
+		<script src="js/jquery-3.5.1.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<!-- 引入自定义js -->
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+		<!-- 顶部标题 -->
+		<header class="text-center">
+			<img src="img/title.png" class="text-center"/>
+		</header>
+		<!-- 登陆部分 -->
+		<div class="login container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-sm-offset-7 form-user">
+					<div class="row">
+						<img class="img-circle col-sm-6 col-sm-offset-5" src="img/person.png" style="width: 80px;height: 80px;background-color: wheat;display: block;position: absolute;top: -40px;margin-bottom: 15px;"/>
+					</div>
+					<form class="form-horizontal">
+					  <div class="form-group">
+					    <label class="col-sm-1 control-label col-sm-offset-1"><span class="glyphicon glyphicon-user"></span></label>
+					    <div class="col-sm-9 username-area">
+					      <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+					    </div>
+						<label class="control-label hidden" id="username-tag"><span class="glyphicon glyphicon-remove"></span></label>
+					  </div>
+					  <div class="form-group">
+					    <label class="col-sm-1 control-label col-sm-offset-1"><span class="glyphicon glyphicon-lock"></span></label>
+					    <div class="col-sm-9 password-area">
+					      <input type="password" class="form-control" id="inputPassword" placeholder="Password"/>
+					    </div>
+						<label class="control-label hidden" id="password-tag"><span class="glyphicon glyphicon-remove"></span></label>
+					  </div>
+					  
+					    <div class="form-group">
+					      <div class="col-sm-offset-1">
+					        <a href="main.html" class="btn btn-info col-sm-4 col-sm-offset-1" id="login_btn" onclick="return loginCheck()">登录</a>
+							<a class="btn btn-info col-sm-4 col-sm-offset-1" data-toggle="modal" data-target="#registerModal" id="register_btn">注册</a>
+					      </div>
+						  <!--Register Modal -->
+						  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  	<div class="modal-dialog" role="document">
+						  		<div class="modal-content">
+						  			<div class="modal-header">
+						  				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						  				<h4 class="modal-title" id="myModalLabel">用户注册</h4>
+						  			</div>
+						  			<div class="modal-body">
+						  				<form action="" class="form-horizontal">
+						  					<div class="form-group">
+						  						<label class="col-sm-3 control-label">用户名</label>
+						  						<div class="col-sm-7 register-username-area">
+						  							<input type="text" id="register-username" class="form-control" placeholder="请输入6-18位数字或字母">
+						  						</div>
+												<label class="control-label hidden" id="register-username-tag"><span class="glyphicon glyphicon-remove"></span></label>
+						  					</div>
+						  					<div class="form-group">
+						  						<label class="col-sm-3 control-label">密码</label>
+						  						<div class="col-sm-7 register-password-area">
+						  							<input type="password" id="register-password" class="form-control" placeholder="请输入6-18位密码">
+						  						</div>
+												<label class="control-label hidden" id="register-password-tag"><span class="glyphicon glyphicon-remove"></span></label>
+						  					</div>
+						  					<div class="form-group">
+						  						<label class="col-sm-3 control-label">确认密码</label>
+						  						<div class="col-sm-7 register-repeatPassword-area">
+						  							<input type="password"  id="register-repeatPassword" class="form-control" placeholder="请再次输入">
+						  						</div>
+												<label class="control-label hidden" id="register-repeatPassword-tag"><span class="glyphicon glyphicon-remove"></span></label>
+						  					</div>
+						  					<div class="form-group">
+						  						<label class="col-sm-3 control-label">身份</label>
+						  						<div class="col-sm-3">
+						  						  <div class="radio">
+						  						    <label>
+						  						      <input type="radio" name="identify" checked> 学生
+						  						    </label>
+						  						  </div>
+						  						</div>
+						  						<div class="col-sm-3">
+						  						  <div class="radio">
+						  						    <label>
+						  						      <input type="radio"  name="identify"> 教师
+						  						    </label>
+						  						  </div>
+						  						</div>
+						  						<div class="col-sm-3">
+						  						  <div class="radio">
+						  						    <label>
+						  						      <input type="radio" name="identify"> 管理员
+						  						    </label>
+						  						  </div>
+						  						</div>
+						  					</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label">手机号</label>
+												<div class="col-sm-7 register-photo-area">
+													<input type="text"  id="register-photo" class="form-control" placeholder="请输入你的手机号">
+												</div>
+												<label class="control-label hidden" id="register-photo-tag"><span class="glyphicon glyphicon-remove"></span></label>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label">邮箱</label>
+												<div class="col-sm-7 register-email-area">
+													<input type="text"  id="register-email" class="form-control" placeholder="请输入你的邮箱">
+												</div>
+												<label class="control-label hidden" id="register-email-tag"><span class="glyphicon glyphicon-remove"></span></label>
+											</div>
+											<label class="col-sm-offset-1">温习提示：学生请用学号注册；教师请用职工号注册；管理员用编号注册</label>
+						  				</form>
+						  
+						  			</div>
+						  			<div class="modal-footer">
+						  				<a class="btn btn-default" data-dismiss="modal">取消</a>
+						  				<a href="main.html" class="btn btn-primary" onclick="return registerCheck()">确认</a>
+						  			</div>
+						  		</div>
+						  	</div>
+						  </div>
+					    </div>
+						 
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
